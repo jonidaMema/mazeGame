@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='index.js'></script>
+    <title>Maze Game</title>
+
+    <style>
+        canvas#mazeGame {
+            max-width: 99%;
+            padding: 0 15px;
+        }
+        .container.mazeCont {
+            height: 100%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+        .maze_top {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        width: 500px;
+        max-width: 100%;
+        padding: 15px 0;
+        background: lightgray;
+        font-weight: 600;
+        margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 767px) {
+
+            canvas#mazeGame {
+            max-width: 97%;
+            }
+
+            .container.mazeCont {
+                padding: 15px 0;
+            }
+
+        }
+    </style>
+  </head>
+  <body onload='onLoad();'>
+    <div class="container mazeCont">
+        <div class="maze_top">
+            <header>Maze Game</header>
+            <div id="time"></div>
+        </div>
+        <canvas id='mazeGame'></canvas>
+    </div>
+  </body>
+</html>
